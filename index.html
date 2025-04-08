@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 80%;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px; /* Adds space between label and input box */
+      }
+
+        .input_group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+
+        .input_group span {
+            background:rgb(242, 242, 242);
+            padding: 10px;
+            border-right: 1px solid #ccc;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .input_group input{
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            background: none;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            background: none;
+        }
+
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b71c1c;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Remove input arrows */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label>Loan Amount <span title="Total loan amount">ℹ️</span></label>
+            <div class="input_group">
+                <span>RM</span>
+                <input type="text" id="loan_amount" placeholder="e.g. 500,000" oninput="validateInput(this)" />
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 48%;">
+                <label>Interest Rate <span title="Annual interest rate">ℹ️</span></label>
+                <div class="input_group">
+                    <span>%</span>
+                    <input type="number" id="interest_rate" placeholder="e.g. 3"/>
+                </div>
+            </div>
+
+            <div style="width: 48%;">
+                <label>Loan Tenure <span title="Loan duration in years">ℹ️</span></label>
+                <div class="input_group">
+                    <span>Yrs</span>
+                    <input type="number" id="loan_tenure" placeholder="e.g. 35"/>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="calculateMortgage()">Calculate Monthly Mortgage</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function validateInput(input) {
+            let value = input.value.replace(/,/g, '').replace(/\D/g, '');
+
+            if (value) {
+                input.value = parseInt(value, 10).toLocaleString(); // Format with commas
+            } else {
+                input.value = "";
+            }
+        }
+
+        function calculateMortgage() {
+            let loanAmount = document.getElementById("loan_amount").value.replace(/,/g, '');
+            loanAmount = parseFloat(loanAmount)
+            let annualInterestRate = parseFloat(document.getElementById("interest_rate").value);
+            let loanTenure = parseInt(document.getElementById("loan_tenure").value);
+
+            if (isNaN(loanAmount) || isNaN(annualInterestRate) || isNaN(loanTenure) || loanAmount <= 0 || annualInterestRate <= 0 || loanTenure <= 0) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+                return;
+            }
+
+            let monthlyInterestRate = (annualInterestRate / 100) / 12;
+            let totalPayments = loanTenure * 12;
+
+            let monthlyPayment = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalPayments)) / 
+                                 (Math.pow(1 + monthlyInterestRate, totalPayments) - 1);
+
+            document.getElementById("result").innerHTML = `Estimated Monthly Payment: RM ${monthlyPayment.toFixed(0)}`;
+        }
+    </script>
+</body>
+</html>
