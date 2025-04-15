@@ -2,5 +2,5 @@ tommy can you upload again the mortgage calculator at the file , saya terdelete 
 
 btw part saya punya belum latest one lah masih sedang baiki in progress 
 
-really bruh??? later i just git push --force
+really bruh??? later i just git push --force for delete mortgage.html
 
