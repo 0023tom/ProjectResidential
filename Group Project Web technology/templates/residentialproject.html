@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Imperial Suites</title>
+    <link rel="stylesheet" href="static/stylist/style.css">
+    <script src="static/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1> Imperial Suites Bintulu </h1>
+        <nav>
+            <ul>
+            <!--Shau zeng wen part -->  <!--home , gallery , floor plan , buy or rent(mortgage), contact us -->
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="hero"> <!--Andrew part-->
+        <div class="container">
+            <div class="hero-content">
+                <h1> Welcome to </h1>
+                <p> Imperial Suites </p>
+                <button> Explore more</button>
+            </div>
+            <div class="hero-image">
+                <img src="static/img/560394892.jpg" alt="Imperial Suites Bintulu">
+            </div>
+        </div>
+    </section>
+
+    <h1> About </h1>
+    <section class="about"> <!--Andrew part -->
+        <h3> Imperial Suites </h3>
+        <p> Imperial Suites, Bintulu welcomes you to stay at our luxury and most breathtaking apartment suites </p>
+    </section>
+
+    <section class="selling-point"> <!--Jason part-->
+
+    </section>
+
+    <!-- Aiman Part -->
+    <a href="{{ url_for('gallery') }}" style="text-decoration: none; color: inherit;">
+        <section class="interiors">
+          <h2 style="text-align: center; padding: 20px;">Explore Our Interiors</h2>
+          <div class="preview-grid">
+            <img src="static/img/livingroom.png" alt="Living Room">
+            <img src="static/img/kitchen.png" alt="Kitchen">
+            <img src="static/img/bedroom.png" alt="Bedroom">
+          </div>
+        </section>
+      </a>
+      
+      <a href="{{ url_for('gallery') }}" style="text-decoration: none; color: inherit;">
+        <section class="facilities">
+          <h2 style="text-align: center; padding: 20px;">View Our Facilities</h2>
+          <div class="preview-grid">
+            <img src="static/img/gym.png" alt="Gym">
+            <img src="static/img/pool.png" alt="Swimming Pool">
+          </div>
+        </section>
+      </a>
+
+    <section class="floor plan"> <!--Yan part-->
+      <a href="{{ url_for('floorplan')  }}"></a>
+    </section>
+
+    <section class="mortgage"> <!--Tom part-->
+      <div class="mortgage-container">
+        <h2>Mortgage & Financing Options</h2>
+        <p>
+          Dreaming of owning a luxury apartment at Imperial Suites Bintulu? We make it easier with flexible mortgage and financing options tailored for both first-time buyers and investors.
+        </p>
+        <div class="partner-banks">
+          <h3>Partner Banks</h3>
+          <p>We work with top banks to offer competitive interest rates and simplified approval processes.</p>
+          <div class="bank-logos">
+            <img src="static/img/maybank.png" alt="Maybank Logo">
+            <img src="static/img/cimb.png" alt="CIMB Logo">
+            <img src="static/img/public-bank.png" alt="Public Bank Logo">
+            <img src="static/img/rhb.png" alt="RHB Bank Logo">
+            <img src="static/img/hlb.png" alt="Hong Leong Bank Logo">
+          </div>
+        </div>        
+        <div class="mortgage-details">
+          <div class="mortgage-box">
+            <h3>Mortgage Calculator</h3>
+            <p>Estimate your monthly payments, interest, and loan duration easily. Know your budget before you commit.</p>
+            <button onclick="window.location.href='{{ url_for('mortgage') }}'">Use Calculator</button>
+          </div>
+          <div class="mortgage-box">
+            <h3>Flexible Payment Plans</h3>
+            <p>Choose from various financing durations, down payment structures, and monthly plans to suit your lifestyle and budget.</p>
+            <button onclick="window.location.href='{{ url_for('contact') }}'">Talk to Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="Contact Us/form "> <!--Irfan part-->
+      <a href="{{ url_for('contact') }}"></a>
+    </section>
+
+
+    
+
+
+
+</body>
+</html>

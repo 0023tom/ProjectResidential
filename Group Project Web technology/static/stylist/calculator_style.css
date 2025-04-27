@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 40px 0; /* add some top/bottom padding instead */
+}
+
+.page-wrapper {
+    max-width: 1200px; /* same max width as container if needed */
+    margin: 0 auto; /* center everything */
+    padding: 0 20px; /* side breathing space */
+    box-sizing: border-box;
+}
+
+.topic {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.topic h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.topic p {
+    font-size: 16px;
+    color: #666;
+}
+
+.container {
+    width: 800px; /* or whatever size you want */
+    background: white; /* optional, just for better visibility */
+    padding: 20px; /* optional, to add spacing inside */
+    border-radius: 8px; /* optional, to make it look nicer */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional, for a slight shadow */
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.calculator-form {
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+
+.calculator-estimate {
+    flex: 1 1 40%;
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mortgage-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+#estimate-message {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px; /* Adds space between label and input box */
+}
+
+.input_group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.input_group span {
+    background:rgb(242, 242, 242);
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.input_group input{
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    background: none;
+}
+
+button {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3949ab;
+}
+
+#result {
+    margin-top: 40px; /* Give some space from the container */
+    width: 800px;     /* Same width as your container */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+  /* Remove input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

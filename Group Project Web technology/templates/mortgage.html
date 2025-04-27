@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/stylist/calculator_style.css">
+    <script src="static/calculate.js"></script>
+    <title>Mortgage Calculator</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="topic">
+            <h2>Mortgage Loan Calculator</h2>
+            <p>Calculate your monthly mortgage loan repayments and plan your monthly expenses well.</p>
+        </div>
+        <div class="container">
+            <div class="calculator-content">
+                <!-- LEFT: Calculator Form -->
+                <div class="calculator-form">
+                    <div>
+                        <label>Loan Amount <span title="Total loan amount"><i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+                        <div class="input_group">
+                            <span>RM</span>
+                            <input type="text" id="loan_amount" placeholder="e.g. 500,000" oninput="validateInput(this)" />
+                        </div>
+                    </div>
+        
+                    <div>
+                        <label>Down Payment <span title="Optional down payment"><i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+                        <div class="input_group">
+                            <span>RM</span>
+                            <input type="text" id="down_payment" placeholder="e.g. 50,000" oninput="validateInput(this)" />
+                        </div>
+                    </div>
+        
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="width: 48%;">
+                            <label>Interest Rate <span title="Annual interest rate"><i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+                            <div class="input_group">
+                                <span>%</span>
+                                <input type="number" id="interest_rate" placeholder="e.g. 3"/>
+                            </div>
+                        </div>
+        
+                        <div style="width: 48%;">
+                            <label>Loan Tenure <span title="Loan duration in years"><i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+                            <div class="input_group">
+                                <span>Yrs</span>
+                                <input type="number" id="loan_tenure" placeholder="e.g. 35"/>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button onclick="calculateMortgage()" id="calculate">Calculate Monthly Mortgage</button>
+                </div>
+        
+                <!-- RIGHT: Mortgage Image + Text -->
+                <div class="calculator-estimate" id="estimate_box" style="text-align: center;">
+                    <img src="static/img/display.png" alt="Mortgage" class="mortgage-image">
+                    <p id="estimate_message">Enter your loan amount, interest, and tenure to see your estimated monthly repayment.</p>
+                </div>            
+            </div>
+        </div>
+        
+        <!-- Repayment Table outside container -->
+        <div id="result" style="display: none;"></div>
+    </div>
+</body>
+</html>
