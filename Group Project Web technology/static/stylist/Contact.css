@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background:linear-gradient(45deg, #010ffc, #000100);
+  }
+
+  .header {
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .header h1 {
+    margin: 0%;
+    font-size: 20px;
+    color: #222;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .nav-links a:hover {
+    color: #010ffc;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 10px;
+  }
+
+  label {
+    font-weight: 500;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 15px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-section b{
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+    margin-right: auto;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px 20px;
+  }
+  
+  .footer-section a{
+    color: #010ffc;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .checkbox-group {
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+
+  }
+
+  .checkbox-group label {
+   display:inline-flex;
+   align-items: center;
+   gap: 8px;
+   max-width: 250px;
+   white-space: nowrap;
+    
+  }
+
+  .checkbox-group input {
+    margin-right: 0%;
+    transform: scale(1.1);
+  }
+  button{
+    color: white;
+    background-color: #010ffc;
+    padding: 12px 24px;
+    border-radius: 10px 10px;
+    width: 200px;
+    font-size: 20;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
