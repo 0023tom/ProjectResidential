@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel ="stylesheet" href="Contact.css"/>
+  <title>Contact Us - Imperial Suites</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Imperial Suites Bintulu</h1>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Floor Plan</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </div>
+
+ 
+  <div class="container">
+    <h2>Contact Imperial</h2>
+    <form action="https://formspree.io/f/myzwynkl" method="POST">
+      <label>
+        Your Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Your Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Mobile Number:
+        <input type="tel" name="mobile" required>
+      </label>
+      <label>
+        Your Message:
+        <textarea name="message" placeholder="Type your message here..."></textarea>
+      </label>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="Room" value="Apartment-type Room">
+          Apartment-type Room
+        </label>
+        <label>
+          <input type="checkbox" name="Room" value="Single-type Room">
+          Single-type Room
+        </label>
+      </div>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+  </div>
+  <div class="footer">
+    <div class="footer-section">
+      <h3>Contact Information</h3>
+      <p><strong>Tel:</strong> +60 86 330 399 | <strong>Fax:</strong> +60 86 337 199</p>
+      <p><strong>Email:</strong> <a href="mailto:isbtu@imperial.com.my">isbtu@imperial.com.my</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Address</h3>
+      <p>Bintulu Beach Resort Condominium,</p>
+      <p>Lot 3128, 3630 & 3631, Tanjung Batu Road,</p>
+      <p>97000 Bintulu, Sarawak, Malaysia.</p>
+    </div>
+  </div>
+  
+</body>
+</html>
