@@ -1,1 +1,209 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #010fcc, #000108);
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: white;
+  width: 100%;
+  padding: 20px 0px 20px;
+  justify-content: space-around;
+  gap: 50px;
+}
+.brand {
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav a {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1.5px solid rgb(0, 0, 0);
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav a:hover {
+  background-color: black;
+  color: white;
+  border: 1.5px solid rgb(0, 0, 0);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  overflow-x: hidden;
+}
+.wText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+}
+.container {
+  margin: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  display: flex;
+  margin-bottom: 30px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  max-height: 300px;
+  overflow: hidden;
+  width: 90%;
+}
+.lside {
+  flex: 2;
+}
+.lside img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.rside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+.txtDiv {
+  overflow: hidden;
+  min-height: 149px;
+  max-height: 200px;
+}
+.viewBtn,
+.viewBtn1 {
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #000983;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+.viewBtn:hover,
+.viewBtn1:hover {
+  background-color: white;
+  color: black;
+}
+.viewBtn:active {
+  background-color: rgb(196, 85, 85);
+  color: white;
+}
+.popUp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  z-index: 999;
+}
+.popUpShow {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+.popUpShow img {
+  object-fit: contain;
+  width: 900px;
+  height: 90%;
+}
+.popUpShow .boxHeader {
+  margin: 20px;
+  display: flex;
+  gap: 30px;
+}
+.boxMain {
+  display: flex;
+}
+#dwBtn,
+#dwBtn1 {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: rgb(101, 205, 101);
+  color: white;
+  transition: background-color 0.3s;
+}
+#dwBtn:hover,
+#dwBtn1:hover {
+  background-color: rgb(54, 125, 54);
+  cursor: pointer;
+}
+#closeBtn,
+#closeBtn1 {
+  padding: 5px 20px;
+  background-color: rgb(255, 74, 74);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+}
+#closeBtn:hover,
+#closeBtn1:hover {
+  background-color: rgb(196, 57, 57);
+}
+#closeBtn:active,
+#closeBtn1:active {
+  background-color: rgb(114, 35, 35);
+}
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.574);
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  visibility: hidden;
+}
+.showOverlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.574);
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  visibility: visible;
+}
 
