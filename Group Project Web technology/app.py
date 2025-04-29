@@ -22,5 +22,9 @@ def floorplan():
 def contact():
     return render_template('contact.html')
 
+@app.route('/concept')
+def concept():
+    return render_template('concept.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
