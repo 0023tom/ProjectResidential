@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel ="stylesheet" href="Contact.css"/>
+  <link rel ="stylesheet" href="static/stylist/contact.css"/>
   <title>Contact Us - Imperial Suites</title>
 </head>
 
@@ -11,10 +11,10 @@
   <div class="header">
     <h1>Imperial Suites Bintulu</h1>
     <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Floor Plan</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact Us</a>
+      <a href="{{ url_for('residentialproject') }}">Home</a>
+      <a href="{{ url_for('floorplan') }}">Floor Plan</a>
+      <a href="{{ url_for('gallery') }}" class="active">Gallery</a>
+      <a href="{{ url_for('contact') }}">Contact Us</a>
     </nav>
   </div>
 
