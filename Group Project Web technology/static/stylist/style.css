@@ -97,6 +97,44 @@ h1 {
     text-align: center;
 }
 
+/*Floorplan section styles */
+.floorplan {
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 15px;
+  width: 60%;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#btnMore {
+  padding: 10px 30px;
+  border: none;
+  background-color: #000983;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+#btnMore:hover {
+  padding: 10px 30px;
+  border: none;
+  background-color: #1724d1;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
 /* Mortgage Section Styles */
 .mortgage {
     background-color: #f7f7f7;
