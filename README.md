@@ -8,5 +8,5 @@
 5. for the floor plan got hyperlink , to your page ,and at your page ill write the detail and explanation to the floor plan and change the design aswell done
 6. for the intersection and connection , between the page , already done 
 7. for the flask , i think we dont need to use it since ive encounter many error such as image missing , explaination mess up and can't find the url , better not use it too complicated
-8. for the documentation , i think you can start now , all part fixed , if you guys have anything to add just add dont need to change the design since ill make on the risk that ill stay overnight less sleep
+8. for the documentation , i think you can start now , all part fixed ,
 
