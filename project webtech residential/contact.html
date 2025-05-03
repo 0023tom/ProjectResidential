@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> Imperial Suites</title>
+        <link rel="stylesheet" href="static/thestyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="residential.html"><img src="static/img/IMPERIAL SUITES 3.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="residential.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="offers.html">OFFERS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="floorplan.html">FLOORPLAN</a></li>
+                        <li><a href="mortgage.html">MORTGAGE</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1> Contact Us </h1>
+        </section>
+
+        <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5925207662394!2d113.0451486749714!3d3.2012170967739975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x321dc1231ba7bc01%3A0x3af530740e3ffb6f!2sImperial%20Suites!5e0!3m2!1sen!2smy!4v1746028617894!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5> Lot 3128, 3630 & 3631, Tanjung Batu Road </h5>
+                            <p>97000 Bintulu, Sarawak, Malaysia</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5> Tel: +60 86 330 399 <br>  Fax: +60 86 337 199 </h5>
+                            <p> Monday-Saturday </p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope-o"></i>
+                        <span>
+                            <h5> Email: isbtu@imperial.com.my </h5>
+                            <p> Email us for any query </p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <form action="https://formspree.io/f/myzwynkl" method="POST" >
+                        <label>
+                          Your Name:
+                          <input type="text" name="name" required>
+                        </label>
+                        <label>
+                          Your Email:
+                          <input type="email" name="email" required>
+                        </label>
+                        <label>
+                          Mobile Number:
+                          <input type="tel" name="mobile" required>
+                        </label>
+                        <label>
+                          Your Message:
+                          <textarea name="message" placeholder="Type your message here..."></textarea>
+                        </label>
+
+                        <button type="submit">Submit Inquiry</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="footer">
+            <h4> About Us </h4>
+            <p> Imperial Suites, Bintulu welcomes you to stay at our luxury and most breathtaking apartment suites, 
+                designed for those who enjoy living next to scenic beaches and is,<br> 
+                approximately 15 minutes drive from the main town of Bintulu. 
+                The property is situated between the urban and the healthy green with 10 minutes walking distance to commercial district 
+                where you can shop for hardware, fashion, food and beverage outlets and enjoy dinning at local seaside restaurants.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <p>Made with <i class="fa fa-heart-o"></i> by Our Group </p>
+        </section>
+
+
+        <script> 
+            var navLinks = document.getElementById("navLinks");
+        
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        
+        
+    </body>
+</html>
